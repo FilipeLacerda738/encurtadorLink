@@ -4,9 +4,9 @@ const recarregarbtn = document.getElementById('recarregar-btn');
 encurtabtn.addEventListener('click', URLencurtada);
 
 function URLencurtada(){
-    let URLoriginal = document.getElementById("URLoriginal").value;
+    const URLoriginal = document.getElementById("URLoriginal").value;
     const api = "https://tinyurl.com/api-create.php?url=" + encodeURIComponent(URLoriginal);
-    URLencurtadaTextArea = document.getElementById("URLencurtada");
+    const URLencurtadaTextArea = document.getElementById("URLencurtada");
 
     fetch(api).then(res => res.text()).then(data => {
         URLencurtadaTextArea.value = data;
